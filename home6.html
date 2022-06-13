@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beranda - VIRTUALMU Menjual berbagai kebutuhan virtual anda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4fd8580d50.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bs-body-color: #d2e1f1;
+            --body-color: #f0f8ff ;
+            --white: #f2f2f2;
+            --black: #868e96
+        }
+
+        @media (max-width: 1024px) {
+            .navbar {
+                right: 0;
+                height: 70px;
+                z-index: 890;
+                padding: .5rem 1rem;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+
+            .navbar-expand-lg>.container,
+            .navbar-expand-lg>.container-fluid {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+
+        @media (max-width: 1024px) {
+            .main-content {
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 100% !important;
+                position: relative;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .banner {
+                margin-right: -20px;
+                margin-left: -20px;
+                margin-top: -15px;
+            }
+        }
+
+        .carousel-indicators {
+            bottom: 10px;
+            z-index: 15;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            font-size: var(--bs-nav-link-font-size);
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .offcanvas-lg {
+            border-left: 0;
+        }
+
+        .offcanvas-lg.offcanvas-end {
+            width: 250px;
+        }
+
+        .nav {
+            --bs-nav-link-color: var(--bs-body-color);
+            text-decoration: none;
+        }
+
+        .nav-tabs {
+            --bs-nav-tabs-border-width: none;
+            --bs-nav-tabs-border-radius: none;
+            --bs-nav-tabs-link-hover-border-color: none;
+            --bs-nav-tabs-link-active-color: #ffffff;
+            --bs-nav-tabs-link-active-bg: none;
+            --bs-nav-tabs-link-active-border-color: #0080ff;
+        }
+
+        .nav-link {
+            padding: 0;
+        }
+
+        .col {
+            flex: none;
+            flex-basis: 0;
+            flex-grow: 1;
+            position: relative;
+            min-height: 1px;
+            max-width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .section {
+            position: relative;
+            z-index: 1;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .list-product {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 33%;
+            padding: 7px;
+            margin-bottom: 15px;
+        }
+
+        #disabled {
+            opacity: 0.2;
+        }
+
+        .link-product {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: var(--black);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .img-product {
+            display: block;
+            border-radius: 12px;
+            max-width: 100%;
+            max-height: 172px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+        }
+
+        .garis {
+            margin: 0 -1rem;
+            border-top: 7px;
+            border-style: solid;
+            border-color: #0080ff;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo::before {
+            content: "";
+            border-bottom: 1px solid;
+            border-color: #d2e1f1;
+            flex-grow: 1;
+            margin-right: 32px;
+        }
+
+        .footer-logo::after {
+            content: "";
+            border-bottom: 1px solid;
+            border-color: #d2e1f1;
+            flex-grow: 1;
+            margin-left: 32px;
+        }
+
+        .footer-img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+        }
+        .metode{
+            height: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body style="background:var(--body-color)">
+    <div class="main-wrapper">
+        <!-- NAVBAR-MULAI-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container flex-wrap" aria-label="Main navigation">
+                <a class="navbar-brand" href="#">
+                    <img src="https://vpaymu.github.io/image/logoputih.png" alt="" width="30px"
+                        class="d-inline-block align-text-center">
+                    VIRTUALMU
+                </a>
+                <a class="navbar-toggler d-lg-none order-3 p-2" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar"
+                    aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <div class="offcanvas-lg offcanvas-end flex-grow-1 bg-primary" id="bdNavbar"
+                    aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+                    <div class="offcanvas-header px-4 pb-0">
+                        <a class="navbar-brand p-0 me-0 me-lg-2" href="#">
+                            <img src="https://vpaymu.github.io/image/logoputih.png" alt="" width="30px"
+                                class="d-inline-block align-text-center">
+                            VIRTUALMU
+                        </a>
+                        <a data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar">
+                            <i class="fas fa-x" style="color: white"></i>
+                        </a>
+                    </div>
+
+                    <div class="offcanvas-body p-4 pt-0 p-lg-0">
+                        <hr class="d-lg-none text-white-50">
+                        <ul class="navbar-nav flex-wrap ms-md-auto">
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-2" aria-current="true" href="#">
+                                    <i class="fas fa-house pe-2"></i>Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                                    <i class="fa-brands fa-sistrix pe-2"></i>Cek Pesanan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                                    <i class="fas fa-list pe-2"></i>Daftar Harga</a>
+                            </li>
+                            <hr class="d-lg-none text-white-50">
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-2" aria-current="true" href="#">
+                                    <i class="fa-brands fa-whatsapp pe-2"></i>WhatsApp</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-2" aria-current="true" href="#">
+                                    <i class="fa-brands fa-instagram pe-2"></i>Instagram</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR-SELESAI-->
+        <!-- MAIN CONTENT-MULAI-->
+        <div class="main-content" style="min-height: 465px;">
+            <div class="banner mt-md-2">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="https://vpaymu.github.io/image/hitam1500x500.png" class="img-fluid">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="https://vpaymu.github.io/image/ijo1500x500.png" class="img-fluid">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="https://vpaymu.github.io/image/ungu1500x500.png" class="img-fluid">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="">
+                <div class="banner bg-primary ml-4 mb-2 nav nav-tabs" id="nav-tab" role="tablist"
+                    style="display: flex; overflow: auto;">
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link active" id="nav-topup-tab" data-bs-toggle="tab" data-bs-target="#nav-topup"
+                            type="button" role="tab" aria-controls="nav-topup" aria-selected="true">
+                            <i class="fas fa-gamepad mb-2" style="font-size:25px"></i>
+                            <br>
+                            <span style="font-size: 10px;">TOP UP GAME</span>
+                        </a>
+                    </div>
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link" id="nav-voucher-tab" data-bs-toggle="tab" data-bs-target="#nav-voucher"
+                            type="button" role="tab" aria-controls="nav-voucher" aria-selected="true">
+                            <i class="fas fa-ticket mb-2" style="font-size:25px"></i>
+                            <br>
+                            <span style="font-size: 10px;">VOUCHER GAME</span>
+                        </a>
+                    </div>
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link" id="nav-pulsa-tab" data-bs-toggle="tab" data-bs-target="#nav-pulsa"
+                            type="button" role="tab" aria-controls="nav-pulsa" aria-selected="true">
+                            <i class="fas fa-mobile-screen-button mb-2" style="font-size:25px"></i>
+                            <br>
+                            <span style="font-size: 10px;">PULSA</span>
+                        </a>
+                    </div>
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link" id="nav-ewallet-tab" data-bs-toggle="tab" data-bs-target="#nav-ewallet"
+                            type="button" role="tab" aria-controls="nav-ewallet" aria-selected="true">
+                            <i class="fas fa-wallet mb-2" style="font-size:25px"></i>
+                            <br>
+                            <span style="font-size: 10px;">EWALLET</span>
+                        </a>
+                    </div>
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link" id="nav-lainnya-tab" data-bs-toggle="tab" data-bs-target="#nav-lainnya"
+                            type="button" role="tab" aria-controls="nav-lainnya" aria-selected="true">
+                            <i class="fas fa-ellipsis mb-2" style="font-size:25px"></i>
+                            <br>
+                            <span style="font-size: 10px;">LAINNYA</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <section class="section mb-2">
+                <div class="section-body">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-topup" role="tabpanel"
+                            aria-labelledby="nav-topup-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Mobile Legends</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ff.png" class="img-product">
+                                        Free Fire</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Call Of Duty Mobile</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Apex Legends Mobile</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        PUBG Mobile</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Genshin Impact</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-voucher" role="tabpanel" aria-labelledby="nav-voucher-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        READY Smile One Code</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ff.png" class="img-product">
+                                        PRE ORDER Smile One Code</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        READY Garena Shell</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        PRE ORDER Garena Shell</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        READY Unipin ID</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        PRE ORDER Unipin ID</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-pulsa" role="tabpanel" aria-labelledby="nav-pulsa-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Telkomsel</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ff.png" class="img-product">
+                                        Byu</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        XL</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Axis</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Three</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Indosat</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-ewallet" role="tabpanel" aria-labelledby="nav-ewallet-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Dana</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ff.png" class="img-product">
+                                        Shopeepay</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Gopay</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Ovo</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Link Aja</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-lainnya" role="tabpanel" aria-labelledby="nav-lainnya-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Source Code Bukaolshop</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Source Code Web Top up</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Netflix</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Spotify</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- MAIN CONTENT-SELESAI-->
+    </div>
+    <hr class="garis">
+    <section class="text-center" style="background-color: var(--body-color)">
+        <div class="container pt-2 pb-2">
+            <h2 style="color: var(--black); font-size: 14px;" >
+                Metode Pembayaran
+            </h2>
+            <marquee direction="right">
+                <img class="metode" src="https://vpaymu.github.io/image/ibca.png" alt="BCA Virtual Account"
+                    loading="lazy">
+                <img class="metode" src="https://vpaymu.github.io/image/idana.png" alt="Dana" loading="lazy">
+                <img class="metode" src="https://vpaymu.github.io/image/igopay.png" alt="Gopay" loading="lazy">
+                <img class="metode" src="https://vpaymu.github.io/image/iovo.png" alt="Ovo" loading="lazy">
+                <img class="metode" src="https://vpaymu.github.io/image/iqris.png" alt="Qris" loading="lazy">
+            </marquee>
+        </div>
+    </section>
+    <hr class="garis">
+    <!-- FOOTER-MULAI-->
+    <footer style="background-color: #0080ff">
+        <div class="footer-logo pt-3 pb-3">
+            <img alt="Logo" src="https://vpaymu.github.io/image/transparan1500x500.png" class="footer-img">
+        </div>
+        <div class="text-center" style="color: #d2e1f1 ; font-size: 14px;">
+            <p class="copyright mb-0">© 2022 VIRTUALMU. All rights reserved</p>
+        </div>
+    </footer>
+    <!-- FOOTER-MULAI-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

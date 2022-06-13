@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free Fire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <style type="text/css" media="all">
+        body {
+            background-color: #7E57C2;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .modal-content {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            color: var(--bs-modal-color);
+            pointer-events: auto;
+            background-color: transparent;
+            background-clip: padding-box;
+            border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+            border-radius: var(--bs-modal-border-radius);
+            outline: 0;
+        }
+
+        .btn-primary {
+            --bs-btn-color: #fff;
+            --bs-btn-bg: #7E57C2;
+            --bs-btn-border-color: #0d6efd;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: #0b5ed7;
+            --bs-btn-hover-border-color: #0a58ca;
+            --bs-btn-focus-shadow-rgb: 49, 132, 253;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: #0a58ca;
+            --bs-btn-active-border-color: #0a53be;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #fff;
+            --bs-btn-disabled-bg: #0d6efd;
+            --bs-btn-disabled-border-color: #0d6efd;
+        }
+
+        .bg-custom {
+            background-color: #000;
+            border-bottom: 1px;
+        }
+
+        .shadow-sm {
+            box-shadow: 1px 1px white;
+        }
+
+        .section {
+            background-color: #000;
+            border-radius: 10px;
+        }
+
+        .card-body {
+            flex: 1 1 auto;
+            padding: 1.25rem;
+        }
+
+        .circle-primary {
+            background-color: #7E57C2;
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -5px;
+            margin-left: -5px;
+        }
+
+        .form-row>.col,
+        .form-row>[class*=col-] {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        input[type=checkbox],
+        input[type=radio] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .radio-nominal {
+            color: #7E57C2;
+            display: none;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .radio-nominal:checked+label {
+            text-align: left;
+            background-image: none;
+            background-color: #7E57C2;
+            color: #fff;
+            border: 2px solid #0a4875;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .radio-nominal+label {
+            text-align: left;
+            color: #000;
+            display: inline-block;
+            padding: 13px;
+            background-color: #fff;
+            border: 2px solid #627283;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 10px;
+        }
+
+        label {
+            color: #585858;
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        img.card {
+            padding: .25rem .50rem;
+            border-radius: 3px;
+            background-color: transparent;
+            border: none;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .text-right {
+            text-align: right !important;
+        }
+
+        .garis {
+            border-top: 2px;
+            border-style: solid;
+            border-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start wrapper-->
+    <div id="wrapper">
+
+        <!--Start topbar header-->
+
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light shadow-sm bg-custom">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://vpaymu.github.io/image/logo_virtualmu.png"
+                            style="width: auto; height: 50px; color: #fff!important;" alt="logo icon">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+
+        <!--End topbar header-->
+
+        <div class="clearfix pt-5"></div>
+        <div class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="text-center pt-3 pb-2">
+                            <img src="https://vpaymu.github.io/image/ff.png" class="mb-3"
+                                style="display: block; margin: 0 auto; border-radius: 10px !important;" width="120px"
+                                height="120px">
+                            <h5>Free Fire</h5>
+                        </div>
+                        <div class="text-center pb-3">
+                            <p>
+                                Top up <strong>Free Fire</strong> dengan murah dan cepat. Caranya mudah, cukup
+                                input data game, pilih nominal yang diinginkan, lakukan pembayaran, lalu <strong>Diamond
+                                    Free Fire</strong> akan langsung bertambah ke akun kamu.
+                            </p>
+                            <p>
+                                <strong>
+                                    Layanan Aktif 24 Jam<br>
+                                    Estimasi Proses Otomatis 1-5 Menit
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="pb-3">
+                            <div class="section">
+                                <div class="card-body">
+                                    <div class="text-white text-center position-absolute circle-primary">1</div>
+                                    <h5 style="margin-left: 45px; margin-top: 5px;">Lengkapi Data</h5>
+
+                                    <div class="form-row pt-3">
+                                        <div class="col-sm-4 col-6 pt-3">
+                                            <input type="number" class="form-control" id="userID" placeholder="User ID"
+                                                name="userID" required="">
+                                            <input type="hidden" class="form-control" id="zoneID"
+                                                placeholder="Server ID" name="zoneID" required="">
+                                        </div>
+                                        <div class="col-sm-4 col-6 pt-3"><button type="button" class="btn btn-primary"
+                                                data-bs-toggle="modal" data-bs-target="#myModal">
+                                                Bantuan ?
+                                            </button></div>
+                                        <!-- The Modal -->
+                                        <div class="modal fade" id="myModal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal body -->
+                                                    <div class="modal-body">
+                                                        <img src="https://vpaymu.github.io/image/cekidff.png"
+                                                            class="img-fluid" style="border-radius: 10px;" width="450px"
+                                                            height="100px">
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="pb-3">
+                            <div class="section">
+                                <div class="card-body">
+                                    <div class="text-white text-center position-absolute circle-primary">2</div>
+                                    <h5 style="margin-left: 45px; margin-top: 5px;">Pilih Nominal</h5>
+                                    <div class="row pt-3 pl-2 pr-2 mb-2">
+                                        <div class="col-sm-4 col-6">
+                                            <input required="" type="radio" id="layanan_1" class="radio-nominal"
+                                                name="produkID" value="1344981">
+                                            <label for="layanan_1">3 Diamonds ( 3 + 0 Bonus )</label>
+                                        </div>
+                                        <div class="col-sm-4 col-6">
+                                            <input required="" type="radio" id="layanan_2" class="radio-nominal"
+                                                name="produkID" value="1344982">
+                                            <label for="layanan_2">5 Diamonds ( 5 + 0 Bonus )</label>
+                                        </div>
+                                        <div class="col-sm-4 col-6">
+                                            <input required="" type="radio" id="layanan_3" class="radio-nominal"
+                                                name="produkID" value="1344983">
+                                            <label for="layanan_3">14 Diamonds ( 13 + 1 Bonus )</label>
+                                        </div>
+                                        <div class="col-sm-4 col-6">
+                                            <input required="" type="radio" id="layanan_4" class="radio-nominal"
+                                                name="produkID" value="1344984">
+                                            <label for="layanan_4">28 Diamonds ( 26 + 2 Bonus )</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pb-3">
+                            <div class="section">
+                                <div class="card-body">
+                                    <div class="text-white text-center position-absolute circle-primary">3</div>
+                                    <h5 style="margin-left: 45px; margin-top: 5px;">Pilih Pembayaran</h5>
+                                    <div class="row pt-3 pl-2 pr-2 mb-2" id="result">
+                                        <div class="col-sm-12 col-12">
+                                            <input required="" type="radio" id="flexRadioDefault0" class="radio-nominal"
+                                                name="metode" value="QRIS">
+                                            <label for="flexRadioDefault0">
+                                                <div class="row mx-auto">
+                                                    <div class="col-6"><img
+                                                            src="https://vpaymu.github.io/image/qris_logo.png"
+                                                            class="card img-fluid mb-1"
+                                                            style="display: block; width: auto; height: 50px;">
+                                                    </div>
+                                                    <div class="col-6 text-right" style="font-size:12px">
+                                                        Harga<br>
+                                                        <p id="QRIS">Rp 1,586</p>
+                                                    </div>
+                                                </div>
+
+                                            </label>
+
+                                        </div>
+                                        <div class="col-sm-12 col-12">
+                                            <input required="" type="radio" id="flexRadioDefault1" class="radio-nominal"
+                                                name="metode" value="Saldo">
+                                            <label for="flexRadioDefault1">
+                                                <div class="row mx-auto">
+                                                    <div class="col-6"><img
+                                                            src="https://vpaymu.github.io/image/logo_virtualmu.png"
+                                                            class="card img-fluid mb-1"
+                                                            style="display: block; width: auto; height: 50px;">
+                                                    </div>
+                                                    <div class="col-6 text-right" style="font-size:12px">
+                                                        Harga<br>
+                                                        <p id="QRIS">Rp 1,586</p>
+                                                    </div>
+                                                </div>
+
+                                            </label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pb-3">
+                            <div class="section">
+                                <div class="card-body">
+                                    <div class="text-white text-center position-absolute circle-primary">4</div>
+                                    <h5 style="margin-left: 45px; margin-top: 5px;">Konfirmasi Pesanan</h5>
+                                    <div class="form-group pt-3">
+                                        <input type="hidden" name="full_name" id="fullname" class="form-control"
+                                            value="Administrator">
+                                        <input type="hidden" name="email" id="email" class="form-control"
+                                            value="support@r-store11.my.id">
+                                        <input type="hidden" name="IDuser" id="IDuser" class="form-control" value="1">
+                                        <input type="number" name="no_hp" id="noHp" placeholder="Masukan No. Whatsapp"
+                                            class="form-control" value="" required="">
+                                        <p class="col-12 mt-2" style="font-size: 10px; color: #fff;">Dengan membeli
+                                            otomatis saya menyutujui <a href="https://vpaymu.github.io" target="_blank"
+                                                class="text-warning">Ketentuan Layanan</a>.</p>
+                                        <a id="submitId" value="submit" class="btn btn-primary text-white">Beli
+                                            Sekarang</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="garis">
+        <footer>
+            <div class="text-center mb-3">
+                © 2022 Virtualmu All rights reserved.
+            </div>
+        </footer>
+    </div>
+    <!--End wrapper-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beranda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4fd8580d50.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --white: #fff;
+            --black: #24292d;
+            --nav-main: #4070f4;
+            --switchers-main: #0b3cc1;
+            --light-bg: #f0f8ff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            background: var(--light-bg);
+        }
+
+        nav {
+            position: fixed;
+            background: var(--nav-main);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-gone-hide {
+            display: none !important;
+        }
+
+        .navbar .nav-link {
+            color: #f2f2f2;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            height: 100%;
+            opacity: 1;
+        }
+
+        .navbar .appearance {
+            display: flex;
+            align-items: center;
+        }
+
+        .appearance .color-icon {
+            position: relative;
+        }
+
+        .appearance .light-dark,
+        .appearance .color-icon .icons {
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: var(--white);
+            margin: 0 3px;
+            border-radius: 6px;
+            background: var(--switchers-main);
+            cursor: pointer;
+        }
+
+        .appearance .color-icon .color-box {
+            position: absolute;
+            bottom: -133px;
+            right: 0;
+            min-height: 100px;
+            background: var(--white);
+            padding: 16px 20px 20px 20px;
+            border-radius: 6px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            pointer-events: none;
+
+        }
+
+        .color-icon.open .color-box {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .color-icon.open .arrow {
+            transform: rotate(-180deg);
+        }
+
+        .color-icon .color-box::before {
+            content: '';
+            position: absolute;
+            right: 5px;
+            top: -9px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: var(--white);
+        }
+
+        .color-icon .color-box h3 {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 300;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .color-box .color-switchers {
+            display: flex;
+        }
+
+        .color-box .color-switchers .btn {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            outline: none;
+            border: none;
+            border-radius: 50%;
+            background: #4070f4;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+
+        .color-switchers .btn.active {
+            box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #4070f4;
+        }
+
+        .color-switchers .btn.orange {
+            background: #f79f1f;
+        }
+
+        .color-switchers .btn.orange.active {
+            box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #f79f1f;
+        }
+
+        .color-switchers .btn.purple {
+            background: #8e44ad;
+        }
+
+        .color-switchers .btn.purple.active {
+            box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #8e44ad;
+        }
+
+        .color-switchers .btn.green {
+            background: #3a9943;
+        }
+
+        .color-switchers .btn.green.active {
+            box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #3a9943;
+        }
+    </style>
+</head>
+
+<body class="sidebar-gone">
+    <div id="app">
+        <div class="main-wrapper">
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <div class="container">
+                    <a href="#" class="navbar-brand sidebar-gone-hide">
+                        <img src="https://vpaymu.github.io/image/logoputih.png" class="img-fluid d-none d-md-block"
+                            width="160px">
+                        <img src="https://vpaymu.github.io/image/logomerah.png"
+                            class="img-fluid d-lg-none d-md-inline-block" width="160px">
+                    </a>
+                    <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i
+                            class="fas fa-bars mt-2"></i></a>
+                    <a href="#" class="d-lg-none d-md-inline-block"><img
+                            src="https://vpaymu.github.io/image/logoputih.png" class="img-fluid" width="40px"></a>
+                    <div class="appearance">
+                        <div class="light-dark">
+                            <i class="btn fas fa-moon" data-color="#e4e6eb #e4e6eb #24292d #24292d #242526"></i>
+                        </div>
+                        <div class="color-icon">
+                            <div class="icons">
+                                <i class="fas fa-palette"></i>
+                                <i class="fas fa-sort-down arrow"></i>
+                            </div>
+                            <div class="color-box">
+                                <h3>Ganti Warna</h3>
+                                <div class="color-switchers">
+                                    <button class="btn blue active"
+                                        data-color="#fff #24292d #4070f4 #0b3cc1 #F0F8FF"></button>
+                                    <button class="btn orange"
+                                        data-color="#fff #24292d #F79F1F #DD8808 #FEF5E6"></button>
+                                    <button class="btn purple"
+                                        data-color="#fff #24292d #8E44AD #783993 #EADAF1"></button>
+                                    <button class="btn green"
+                                        data-color="#fff #24292d #3A9943 #2A6F31 #DAF1DC"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <script>
+        let colorIcons = document.querySelector(".color-icon"),
+            icons = document.querySelector(".color-icon .icons");
+
+        icons.addEventListener("click", () => {
+            colorIcons.classList.toggle("open");
+        })
+
+        let buttons = document.querySelectorAll(".btn");
+
+        for (var button of buttons) {
+            button.addEventListener("click", (e) => {
+
+                let target = e.target;
+
+                let open = document.querySelector(".open");
+                if (open) open.classList.remove("open");
+
+                document.querySelector(".active").classList.remove("active");
+                target.classList.add("active");
+
+                let root = document.querySelector(":root"),
+                    dataColor = target.getAttribute("data-color"),
+                    color = dataColor.split(" ");
+
+                root.style.setProperty("--white", color[0]);
+                root.style.setProperty("--black", color[1]);
+                root.style.setProperty("--nav-main", color[2]);
+                root.style.setProperty("--switchers-main", color[3]);
+                root.style.setProperty("--light-bg", color[4]);
+
+                let iconName = target.className.split(" ")[2];
+                if (target.classList.contains("fa-moon")) {
+                    target.classList.replace(iconName, "fa-sun");
+                    colorIcons.style.display = "none";
+                } else if (target.classList.contains("fa-sun")) {
+                    target.classList.replace("fa-sun", "fa-moon");
+                    colorIcons.style.display = "block";
+                    document.querySelector(".btn.blue").click();
+                }
+            })
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beranda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4fd8580d50.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #181818;
+            font-size: .875rem;
+            font-weight: 300;
+            font-family: 'Poppins', sans-serif;
+            color: #6c757d;
+        }
+
+        .navbar {
+            background-color: #181818;
+            --bs-navbar-brand-hover-color: red;
+
+        }
+
+        .navbar-nav {
+            --bs-nav-link-hover-color: red;
+        }
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: medium;
+            font-weight: 500;
+            color: #f2f2f2;
+        }
+
+        .navbar-toggler {
+            color: #f2f2f2;
+            border: none;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        @media (max-width: 991.98px) {
+            .offcanvas-lg.offcanvas-end {
+                width: 15.625rem;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .offcanvas-lg {
+                background-color: #181818;
+            }
+        }
+
+        .nav-link {
+            color: #f2f2f2;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+                width: 100% !important;
+            }
+        }
+
+        .main-content {
+            position: relative;
+            padding-top: 1.25rem;
+        }
+
+        @media (max-width: 750px) {
+            .banner {
+                margin-right: -1.25rem;
+                margin-left: -1.25rem;
+                margin-top: -.625rem;
+                background-color: #212121;
+            }
+        }
+
+        .banner {
+            display: flex;
+            overflow: auto;
+        }
+
+        .carousel-indicators {
+            bottom: -.625rem;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .carousel-indicators .active {
+            opacity: 1;
+            background-color: red;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: .313rem;
+            height: .313rem;
+            margin-right: .625rem;
+            margin-left: .625rem;
+            border-radius: 50%;
+        }
+
+        .col {
+            max-width: 100%;
+            position: relative;
+            width: 100%;
+            min-height: .063rem;
+            padding-right: .938rem;
+            padding-left: .938rem;
+        }
+
+        .nav-tabs {
+            --bs-nav-tabs-border-width: .188rem;
+            --bs-nav-tabs-link-active-color: red;
+            --bs-nav-tabs-link-active-border-color: transparent;
+            --bs-nav-tabs-border-color: transparent;
+            --bs-nav-tabs-border-radius: 0;
+            --bs-nav-tabs-link-hover-border-color: transparent;
+            --bs-nav-tabs-link-active-bg: transparent;
+        }
+
+        .nav {
+            --bs-nav-link-hover-color: #ff0000;
+        }
+
+        .nav-link {
+            color: #6c757d;
+            font-weight: 500;
+            font-size: .625rem;
+            padding: 0;
+        }
+
+        .nav-tabs .nav-link {
+            border: none;
+        }
+
+        .fas {
+            font-size: 1.563rem;
+        }
+
+        .section {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section>*:first-child {
+            margin-top: -.438rem;
+        }
+
+        .list-product {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 1.25rem;
+        }
+
+        .product {
+            width: 33.33333%;
+            padding: .438rem;
+            margin-bottom: .938rem;
+        }
+
+        .link-product {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .img-product {
+            display: block;
+            border-radius: .75rem;
+            max-width: 100%;
+            max-height: 10.75rem;
+            border: .063rem solid var(--border-color);
+            margin-bottom: .938rem;
+        }
+
+        a {
+            color: #6c757d;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .footer {
+            width: 100%;
+        }
+
+        .main-footer {
+            padding: 1.25rem 1.875rem 1.25rem 1.25rem;
+            border-top: 1px solid #263040;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <!-- NAVBAR-MULAI -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container flex-wrap" aria-label="Main navigation">
+                <a class="navbar-brand" href="#">
+                    <img src="https://virtualmu.my.id/virtualmubo/asset/logomerah.png" alt="" width="40"
+                        class="d-inline-block align-text-center">
+                    VIRTUALMU
+                </a>
+                <a class="navbar-toggler d-lg-none order-3 p-2" data-bs-toggle="offcanvas" data-bs-target="#menu"
+                    aria-controls="menu" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <div class="offcanvas-lg offcanvas-end flex-grow-1" id="menu" aria-labelledby="menuOffcanvasLabel">
+                    <div class="offcanvas-header px-4 pb-0">
+                        <a class="navbar-brand p-0 me-0 me-lg-2" href="#">
+                            <img src="https://virtualmu.my.id/virtualmubo/asset/logomerah.png" alt="" width="40"
+                                class="d-inline-block align-text-center">
+                            VIRTUALMU
+                        </a>
+                        <a data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#menu">
+                            <i class="fas fa-x"></i>
+                        </a>
+                    </div>
+
+                    <div class="offcanvas-body p-4 pt-0 p-lg-0">
+                        <hr class="d-lg-none">
+                        <ul class="navbar-nav flex-wrap ms-md-auto">
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-3" aria-current="true" href="#">
+                                    <i class="fas fa-house pe-2" style="font-size: .875rem;"></i>
+                                    <span style="font-size: .875rem;">Beranda</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-3" href="#">
+                                    <i class="fa-brands fa-sistrix pe-2" style="font-size: .875rem;"></i>
+                                    <span style="font-size: .875rem;">Cek Pesanan</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-3" href="#">
+                                    <i class="fas fa-list pe-2" style="font-size: .875rem;"></i>
+                                    <span style="font-size: .875rem;">Daftar Harga</span>
+                                </a>
+                            </li>
+                            <hr class="d-lg-none">
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-3" aria-current="true" href="#">
+                                    <i class="fa-brands fa-whatsapp pe-2" style="font-size: .875rem;"></i>
+                                    <span style="font-size: .875rem;">WhatsApp</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-2 px-0 px-lg-3" aria-current="true" href="#">
+                                    <i class="fa-brands fa-instagram pe-2" style="font-size: .875rem;"></i>
+                                    <span style="font-size: .875rem;">Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR-SELESAI -->
+        <div class="main-content">
+            <!-- BANNER-MULAI -->
+            <div class="banner mt-md-2">
+                <div id="slider-banner" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#slider-banner" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#slider-banner" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#slider-banner" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://virtualmu.my.id/virtualmubo/asset/hitam 1500x500.png"
+                                class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://virtualmu.my.id/virtualmubo/asset/ijo1500x500.png" class="d-block w-100"
+                                alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://virtualmu.my.id/virtualmubo/asset/ungu1500x500.png" class="d-block w-100"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="banner ml--4 mb-2 nav nav-tabs" id="nav-tab" role="tablist">
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link active" id="topup-tab" data-bs-toggle="tab" data-bs-target="#topup"
+                            type="button" role="tab" aria-controls="topup" aria-selected="true">
+                            <i class="fas fa-gamepad mb-2"></i>
+                            <br>
+                            <span>TOP UP GAME</span>
+                        </a>
+                    </div>
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link" id="voucher-tab" data-bs-toggle="tab" data-bs-target="#voucher"
+                            type="button" role="tab" aria-controls="voucher" aria-selected="true">
+                            <i class="fas fa-ticket mb-2"></i>
+                            <br>
+                            <span>VOUCHER GAME</span>
+                        </a>
+                    </div>
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link" id="pulsa-tab" data-bs-toggle="tab" data-bs-target="#pulsa" type="button"
+                            role="tab" aria-controls="pulsa" aria-selected="true">
+                            <i class="fas fa-mobile-screen-button mb-2"></i>
+                            <br>
+                            <span>PULSA</span>
+                        </a>
+                    </div>
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link" id="ewallet-tab" data-bs-toggle="tab" data-bs-target="#ewallet"
+                            type="button" role="tab" aria-controls="ewallet" aria-selected="true">
+                            <i class="fas fa-wallet mb-2"></i>
+                            <br>
+                            <span>EWALLET</span>
+                        </a>
+                    </div>
+                    <div class="col text-center py-3 mt-3 mt-md-0">
+                        <a class="nav-link" id="lainnya-tab" data-bs-toggle="tab" data-bs-target="#lainnya"
+                            type="button" role="tab" aria-controls="lainnya" aria-selected="true">
+                            <i class="fas fa-ellipsis mb-2"></i>
+                            <br>
+                            <span>LAINNYA</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- BANNER-SELESAI -->
+            <!-- PRODUK-MULAI -->
+            <section class="section">
+                <div class="section-body">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="topup" role="tabpanel" aria-labelledby="topup-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/ml.png" class="img-product">
+                                        Mobile Legends</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/ff.png" class="img-product">
+                                        Free Fire</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/codm.png"
+                                            class="img-product">
+                                        Call Of Duty Mobile</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/apex.png"
+                                            class="img-product">
+                                        Apex Legends Mobile</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/pubgm.png"
+                                            class="img-product">
+                                        PUBG Mobile</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/genshin.png"
+                                            class="img-product">
+                                        Genshin Impact</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="voucher" role="tabpanel" aria-labelledby="voucher-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/soc.png"
+                                            class="img-product">
+                                        READY Smile One Code</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/soc.png"
+                                            class="img-product">
+                                        PRE ORDER Smile One Code</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/gs.png" class="img-product">
+                                        READY Garena Shell</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/gs.png" class="img-product">
+                                        PRE ORDER Garena Shell</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/soc.png"
+                                            class="img-product">
+                                        READY Unipin ID</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/gs.png" class="img-product">
+                                        PRE ORDER Unipin ID</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pulsa" role="tabpanel" aria-labelledby="pulsa-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/tsel.png"
+                                            class="img-product">
+                                        Telkomsel</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/byu.png"
+                                            class="img-product">
+                                        Byu</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/xl.png" class="img-product">
+                                        XL</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/axis.png"
+                                            class="img-product">
+                                        Axis</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/three.png"
+                                            class="img-product">
+                                        Three</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://virtualmu.my.id/virtualmubo/asset/indosat.png"
+                                            class="img-product">
+                                        Indosat</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="ewallet" role="tabpanel" aria-labelledby="ewallet-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Dana</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ff.png" class="img-product">
+                                        Shopeepay</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Gopay</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Ovo</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Link Aja</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="lainnya" role="tabpanel" aria-labelledby="lainnya-tab">
+                            <div class="list-product">
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Source Code Bukaolshop</a>
+                                </div>
+                                <div class="product">
+                                    <a href="https://virtualmu.bukaolshop.site/digital/122014" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Source Code Web Top up</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Netflix</a>
+                                </div>
+                                <div id="disabled" class="product">
+                                    <a href="#" class="link-product">
+                                        <img src="https://vpaymu.github.io/image/ml.png" class="img-product">
+                                        Spotify</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PRODUK-SELESAI -->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-md-6 col-12 mb-3" style="border-top:1px solid #263040">
+                    <h5 class="text-center text-md-left" style="color: white;"><img
+                            src="https://virtualmu.my.id/virtualmubo/asset/logomerah.png"
+                            class="img-fluid mt-3 mb-3 me-3" width="40">VIRTUALMU</h5>
+                    <p class="text-center text-md-left"> Layanan 24 jam yang Menyediakan berbagai kebutuhan virtual
+                        anda, dengan mudah, aman, nyaman dan terpercaya. </p>
+                </div>
+                <div class="col-md-6 col-12 mb-3" style="border-top:1px solid #263040">
+                    <h5 class="text-center text-md-left mt-3 mb-4">Metode Pembayaran</h5>
+                    <marquee direction="right" behavior="alternate">
+                        <img src="https://virtualmu.my.id/virtualmubo/asset/ibca.png" width="80px" class="p-1"
+                            style="background-color: #f2f2f2; margin: 0 10px 0 10px;">
+                        <img src="https://virtualmu.my.id/virtualmubo/asset/iqris.png" width="80px" class="p-1"
+                            style="background-color: #f2f2f2; margin: 0 10px 0 10px;">
+                        <img src="https://virtualmu.my.id/virtualmubo/asset/idana.png" width="80px" class="p-1"
+                            style="background-color: #f2f2f2; margin: 0 10px 0 10px;">
+                        <img src="https://virtualmu.my.id/virtualmubo/asset/igopay.png" width="80px" class="p-1"
+                            style="background-color: #f2f2f2; margin: 0 10px 0 10px;">
+                        <img src="https://virtualmu.my.id/virtualmubo/asset/iovo.png" width="80px" class="p-1"
+                            style="background-color: #f2f2f2; margin: 0 10px 0 10px;">
+                        <img src="https://virtualmu.my.id/virtualmubo/asset/ilinkaja.png" width="80px" class="p-1"
+                            style="background-color: #f2f2f2; margin: 0 10px 0 10px;">
+                        <img src="https://virtualmu.my.id/virtualmubo/asset/ishopeepay.png" width="80px" class="p-1"
+                            style="background-color: #f2f2f2; margin: 0 10px 0 10px;">
+                    </marquee>
+                </div>
+                <footer class="main-footer">
+                    <div class="text-center">
+                        Copyright © 2022 <a href="#" style="color: red;">VIRTUALMU</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
